@@ -1,8 +1,10 @@
-# Go lang can run function(s) asynchronously, but not multi-process.
+# ~~Go lang can run function(s) asynchronously, but not multi-process.~~
+# Hello go lang
 
-I expected go could handle multi-process, but it doesn't.
+~~I expected go could handle multi-process, but it doesn't.
 (However, go can do something like `async def` in python3.5 and
-  this seems to be what I **also** want. Great.)
+  this seems to be what I **also** want. Great.)~~
+I confirmed it runs in parallel! Yay!
 
 
 #LICENSE (MIT License)

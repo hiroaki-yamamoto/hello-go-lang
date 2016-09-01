@@ -1,6 +1,9 @@
+// Hmm.. Let's check with forever-loop
+
+
 package main
 
-import ("log"; "sync"; "time"; "runtime"; "os")
+import ("log"; "sync"; "runtime")
 
 func main() {
   var join sync.WaitGroup
@@ -10,9 +13,7 @@ func main() {
   for i := 0; i < runtime.NumCPU(); i++ {
     join.Add(1)
     go func(counter_id int) {
-      log.Printf("Start sleeping: %d (pid: %d)", counter_id, os.Getpid())
-      time.Sleep(3 * time.Second)
-      defer log.Printf("End sleeping: %d (pid: %d)", counter_id, os.Getpid())
+      for {}
       defer join.Done()
     }(i)
   }
